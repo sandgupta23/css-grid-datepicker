@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 var $next = document.getElementById("next");
 var $prev = document.getElementById("prev");
 var $month = document.getElementById("month-name");
