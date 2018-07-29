@@ -1,0 +1,69 @@
+
+.dot {
+    height: 20px;
+    width: 20px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+}
+.grid-container {
+    width: 280px;
+    padding: 4px;
+    border-radius: 2px;
+    display: grid;
+    grid-template-columns: repeat(1, 280px);
+    grid-template-rows: 32px 26px 1fr;
+    grid-template-areas:
+            'h'
+            'dname'
+            'date';
+    border: 1px solid #c5c5c5;
+    justify-content: center;
+}
+
+.header {
+    grid-area: h;
+    background-color: #e9e9e9;
+    border-radius: 2px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.d-name {
+    grid-area: dname;
+    display: grid;
+    grid-template-columns: repeat(7, auto);
+    justify-items: center;
+    align-content: center;
+    font-weight: bold;
+}
+
+.date {
+    grid-area: date;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(36px, 1fr));
+    grid-auto-rows: 28px;
+    grid-gap: 2px 1px;
+    align-items: center;
+    justify-items: stretch;
+    text-align: center;
+}
+
+.date>div{
+    align-self: stretch;
+    /*TODO: making it flexbox just to center the text; there must be a better way to achieve this*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #c5c5c5;
+    cursor: pointer;
+}
+
+.fa{
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
